@@ -4,7 +4,6 @@ weight: 3
 ---
 
 ### Установка
-------
 
 Откройте файл .dmg и перетащите `RustDesk` в `Applications` как на картинке ниже.
 
@@ -23,12 +22,12 @@ weight: 3
 ### Включение разрешений
 
 {{% notice note %}}
-Due to MacOS security policy change, our api which captures input on local side does not work any
-more. You have to enable "Input Monitoring" permission on local Mac side.
-Please follow this
+Из-за изменения политики безопасности MacOS наш API, который захватывает входные данные на локальной стороне, не работает.
+более. Вам необходимо включить разрешение «Input Monitoring» на локальной стороне Mac.
+Пожалуйста, следуйте этому
 [https://github.com/rustdesk/rustdesk/issues/974#issuecomment-1185644923](https://github.com/rustdesk/rustdesk/issues/974#issuecomment-1185644923)
 
-It seems no quick fix, we need to fix together with our Flutter version.
+Похоже, быстрого решения не будет, нам нужно исправить это вместе с нашей версией Flutter.
 {{% /notice %}}
 
 Чтобы захватывать экран требуются разрешения **accessibility** и **screen recording**. RustDesk поможет их настроить.
@@ -38,6 +37,14 @@ It seems no quick fix, we need to fix together with our Flutter version.
 |![](/docs/en/client/mac/images/acc.png)|![](/docs/en/client/mac/images/acc3.png?v2)|
 
 Если разрешения включены, но RustDesk их не видит, то уберите RustDesk из списка при помощи кнопки `-`, затем нажмите кнопку `+` и выберите RustDesk в `/Applications`.
+
+{{% notice note %}}
+[https://github.com/rustdesk/rustdesk/issues/3261](https://github.com/rustdesk/rustdesk/issues/3261) <br>
+Другие беспомощные попытки: <br>
+`tccutil reset ScreenCapture com.carriez.RustDesk` <br>
+`tccutil reset Accessibility com.carriez.RustDesk` <br>
+Перезагрузка по-прежнему требуется.
+{{% /notice %}}
 
 | Кнопки `-` и `+` | Выбор RustDesk |
 | ---- | ---- |
